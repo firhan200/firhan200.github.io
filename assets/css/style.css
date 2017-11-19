@@ -1,0 +1,43 @@
+.header{padding:50px;color:#f8f8f8;font-size:16pt;text-align: center;font-weight:lighter}
+.header .fa{font-size: 40pt;}
+.pad{padding-top: 50px;padding-bottom: 50px;}
+.title{font-size: 20pt;text-align: center;margin-bottom: 20px;}
+.box{background-color: #fff;padding: 25px;border:1px solid #e6e6e6;text-align: center;-webkit-transition: 0.5s;-moz-transition: 0.5s;transition: 0.5s;}
+.box > .fa{font-size:30pt;}
+.box > .box-text{margin-top: 10px;}
+.box:hover{
+  background-color: cornflowerblue;
+  color:#fff;
+  animation: bounce 0.5s infinite alternate;
+  -webkit-animation: bounce 0.5s infinite alternate;
+}
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+.port .col{margin-bottom: 20px;height:25em;background-color: #fff}
+.port-title{margin-bottom: 10px;font-size: 12pt;font-weight: normal;}
+.port-desc{margin-bottom: 10px;font-size: 10pt;}
+.footer{margin-top: -20px;}
+#contact{color:#1c1c1c;}
+#contact .input-field input, #contact .input-field label{color:#1c1c1c !important;}
+#contact .input-field input, #contact .input-field textarea{border-bottom: 1px solid #bdbdbd;}
+#contact .input-field input:focus, #contact .input-field textarea:focus{border-bottom: 1px solid #fff;}
+.contact-form{background-color: #fff;padding: 20px;}
+.footer{padding-top: 10px;padding-bottom: 2px;}
+.footer-icon .fa{color:#bdbdbd;font-size: 24pt;margin-right: 10px;-webkit-transition: 0.5s;-moz-transition: 0.5s;transition: 0.5s;}
+.footer-icon .fa:hover{color:#fff;animation: bounce 0.5s infinite alternate;
+  -webkit-animation: bounce 0.5s infinite alternate;}
+.footer-text{margin-top: 10px;}
