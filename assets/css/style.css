@@ -27,7 +27,7 @@
     transform: translateY(-15px);
   }
 }
-.port .col{margin-bottom: 20px;height:25em;background-color: #fff}
+.port .col{margin-bottom: 20px;background-color: #fff}
 .port-title{margin-bottom: 10px;font-size: 12pt;font-weight: normal;}
 .port-desc{margin-bottom: 10px;font-size: 10pt;}
 .footer{margin-top: -20px;}
