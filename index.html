@@ -7,9 +7,10 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	  	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">	
 	  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
-	  	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	  	<link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
 	</head>
 	<body>		
+		<button id="scroll-to-top-btn" title="Go to top"><i class="fa fa-chevron-up"></i></button>
 		<div class="container main-content">
 			<div class="row">
 				<div class="col-sm-12 col-md-3 col-lg-3">
@@ -40,12 +41,16 @@
 								</div>
 								<div class="body">
 									<ul class="listing">
-										<li>PHP (Codeigniter, Laravel)</li>
-										<li>C# (ASP.NET, Xamarin)</li>
-										<li>Javascript (ReactJs, jQuery)</li>
-										<li>CSS (SaSS, Bootstrap)</li>
-										<li>DMBS (MySQL, SQL Server)</li>
-										<li>Git (Github, Bitbucket, Gitlab)</li>
+										<li>Codeigniter</li>
+										<li>Laravel <span class="subskills">(Middleware, API, Facade, Mix, etc.)</span></li>
+										<li>ASP.NET Framework <span class="subskills">(MVC, Database First, Autofac, etc.)</span></li>
+										<li>Xamarin <span class="subskills">(Messaging Center, Dependency Service, API, etc.)</span></li>
+										<li>ReactJs <span class="subskills">(react-router, redux, redux-thunk, etc.)</span></li>
+										<li>CSS <span class="subskills">(SaSS, Bootstrap)</span></li>
+										<li>MySQL <span class="subskills">(Trigger)</span></li>
+										<li>SQL Server <span class="subskills">(Stored Procedure)</span></li>
+										<li>Git <span class="subskills">(Github, Bitbucket, Gitlab)</span></li>
+										<li>Firebase <span class="subskills">(Authentication, Realtime-database, Messaging, Storage)</span></li>
 									</ul>								
 								</div>
 							</div>
@@ -175,6 +180,24 @@
 							icon: 'fa fa-github',
 							name: 'Github',
 							url: 'https://github.com/firhan200/aquacare'
+						}
+					]
+				},
+				{
+					name : 'Sample React App',
+					cover : '',
+					description: 'Sample online shop with react & firebase',
+					tools: 'ReactJs, redux, firebase',
+					links: [
+						{
+							icon: 'fa fa-github',
+							name: 'Github',
+							url: 'https://github.com/firhan200/react-firebase'
+						},
+						{
+							icon: 'fa fa-globe',
+							name: 'Website',
+							url: 'https://react-firebase-ecom.herokuapp.com/'
 						}
 					]
 				},
@@ -340,15 +363,21 @@
 				$("#total_project").text(projects.length);
 
 				//populate project
-				projects.forEach(function(project){
-					var template = `
-						<li>
-							<div class="name pad">
-								`+project.name+`
-							</div>
+				projects.forEach(function(project, key){
+					var cover = "<div align='center'>no cover</div>";
+					if(project.cover!==""){
+						cover = `
 							<div class="cover">
 								<a data-fancybox="gallery" href="`+project.cover+`"><img src="`+project.cover+`" class="img-fluid"></a>
 							</div>
+						`;
+					}
+					var template = `
+						<li>
+							<div class="name pad">
+								`+(key+1)+`. `+project.name+`
+							</div>
+							`+cover+`
 							<div class="pad">
 								<div class="description">
 									`+project.description+`
@@ -391,6 +420,23 @@
 
 				return result;
 			}
+
+			// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {;
+					$("#scroll-to-top-btn").fadeIn(500);
+				} else {
+					$("#scroll-to-top-btn").fadeOut(500);
+				}
+			}
+
+			// When the user clicks on the button, scroll to the top of the document
+			$("#scroll-to-top-btn").click(function(){
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			});
 		})		
 	</script>
 </html>
