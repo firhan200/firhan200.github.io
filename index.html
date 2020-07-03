@@ -6,34 +6,63 @@
 		<title>Firhan</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	  	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">	
-	  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+		<link rel="stylesheet" type="text/css" href="assets/slick-1.8.1/slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="assets/slick-1.8.1/slick/slick-theme.css"/>
 	  	<link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
 	</head>
 	<body>		
 		<button id="scroll-to-top-btn" title="Go to top"><i class="fa fa-chevron-up"></i></button>
 		<div class="container main-content">
 			<div class="row">
-				<div class="col-sm-12 col-md-3 col-lg-3">
-					<div class="sticky-top">
-						<div class="frame">
-							<div class="label">
-								<div class="title">
-									Name
+				<div class="col-sm-12 col-md-6 col-lg-6">
+					<div class="no-pad">
+						<div class="label">
+							<ul class="projects">
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-6">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="frame">
+								<div class="label">
+									<div class="title">
+										Name
+									</div>
+									<div class="body">
+										Firhan
+									</div>
 								</div>
-								<div class="body">
-									Firhan
-								</div>
-							</div>
-							<div class="label">
-								<div class="title">
-									Education
-								</div>
-								<div class="body">
-									BACHELOR OF COMPUTER SCIENCE, DIPONEGORO UNIVERSITY<br/>
-									GPA: 3.56 | AUG 2013 - APRIL 2017
+								<div class="label">
+									<div class="title">
+										Education
+									</div>
+									<div class="body">
+										BACHELOR OF COMPUTER SCIENCE, DIPONEGORO UNIVERSITY<br/>
+										GPA: 3.56 | AUG 2013 - APRIL 2017
+									</div>
 								</div>
 							</div>
 						</div>
+						<div class="col-md-6">
+							<div class="frame">
+								<div class="label">
+									<div class="title">
+										Contact me
+									</div>
+									<div class="body">
+										<i class="fa fa-envelope"></i> <a href="mailto:firhan.faisal1995@gmail.com" target="_blank">firhan.faisal1995@gmail.com</a><br/>
+										<i class="fa fa-github"></i> <a href="https://github.com/firhan200" target="_blank">Github</a><br/>
+										<i class="fa fa-linkedin-square"></i> <a href="https://www.linkedin.com/in/firhan-faisal-286902b5/">LinkedIn</a><br/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="top">
 						<div class="frame">
 							<div class="label">
 								<div class="title">
@@ -57,8 +86,6 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-sm-12 col-md-6 col-lg-6">
 					<div class="frame">
 						<div class="label">
 							<div class="title">
@@ -105,35 +132,6 @@
 							</div>
 						</div>
 					</div>
-					<div class="frame no-pad">
-						<div class="label">
-							<div class="title pad">
-								Projects (<span id="total_project"></span>)
-								<div class="form-group">
-									<input type="text" id="filter_keyword" class="form-control" placeholder="Search by tools or description..."/>
-								</div>
-							</div>
-							<ul class="projects">
-								
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-12 col-md-3 col-lg-3">
-					<div class="sticky-top">
-						<div class="frame">
-							<div class="label">
-								<div class="title">
-									Contact me
-								</div>
-								<div class="body">
-									<i class="fa fa-envelope"></i> <a href="mailto:firhan.faisal1995@gmail.com" target="_blank">firhan.faisal1995@gmail.com</a><br/>
-									<i class="fa fa-github"></i> <a href="https://github.com/firhan200" target="_blank">Github</a><br/>
-									<i class="fa fa-linkedin-square"></i> <a href="https://www.linkedin.com/in/firhan-faisal-286902b5/">LinkedIn</a><br/>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>	
 			</div>
 		</div>
@@ -143,6 +141,7 @@
 	<!-- Compiled and minified JavaScript -->
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+	<script type="text/javascript" src="assets/slick-1.8.1/slick/slick.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			var keyword = "";
@@ -160,201 +159,92 @@
 			var projects = [
 				{
 					name : 'Cassava Online Shop',
-					cover : 'assets/img/portfolio/cassava.png',
-					description: 'Online shop with laravel',
+					images : [
+						'assets/img/archive/cassava/big-preview.png',
+						'assets/img/archive/cassava/compare.png',
+						'assets/img/archive/cassava/email.png',
+						'assets/img/archive/cassava/responsive.png',
+						'assets/img/archive/cassava/ticketing.png'
+						],
+					description: 'Online shop with laravel. includes many features like, Ticketing, Order, History, CMS, Email Confirmation, etc.',
 					tools: 'Laravel, Rajaongkir, MySQL, jQuery, Bootstrap',
 					links: [
 						{
 							icon: 'fa fa-globe',
 							name: 'website',
-							url: 'http://cassava-shop.herokuapp.com/'
+							url: 'https://cassava.netlify.app/'
 						}
 					]
 				},
 				{
-					name : 'Aquacare',
-					cover : 'assets/img/portfolio/aquacare.png',
-					description: 'Take photo from camera or gallery and save information about tanks & fishes.',
-					tools: 'Android Studio,Java,SQLite',
+					name : 'Refast Template',
+					images : [
+						'assets/img/archive/refast/1.png',
+						'assets/img/archive/refast/2.png',
+						'assets/img/archive/refast/3.png',
+						'assets/img/archive/refast/4.png'
+						],
+					description: 'React html template, built using functional component based.',
+					tools: 'ReactJS, Redux, react-router',
 					links: [
-						{
-							icon: 'fa fa-github',
-							name: 'Github',
-							url: 'https://github.com/firhan200/aquacare'
-						}
-					]
-				},
-				{
-					name : 'Sample React App',
-					cover : '',
-					description: 'Sample online shop with react & firebase',
-					tools: 'ReactJs, redux, firebase',
-					links: [
-						{
-							icon: 'fa fa-github',
-							name: 'Github',
-							url: 'https://github.com/firhan200/react-firebase'
-						},
 						{
 							icon: 'fa fa-globe',
-							name: 'Website',
-							url: 'https://react-firebase-ecom.herokuapp.com/'
+							name: 'website',
+							url: 'https://refast.netlify.app/'
+						},
+						{
+							icon: 'fa fa-github',
+							name: 'Github',
+							url: 'https://github.com/firhan200/refast'
 						}
 					]
 				},
 				{
-					name : 'Xamarin Image Generator',
-					cover : 'assets/img/portfolio/xamarinimagegenerator.png',
-					description: 'Image scale resizing for xamarin android drawable & ios.',
-					tools: 'C#',
+					name : 'Bridgestone Tyres Olympic',
+					images : [
+						'assets/img/archive/bsolympic/1.png',
+						'assets/img/archive/bsolympic/2.png',
+						'assets/img/archive/bsolympic/3.png',
+						'assets/img/archive/bsolympic/4.png',
+						],
+					description: 'Bridgestone quiz web application built on ReactJS. in this project I developed a lot of front-end parts',
+					tools: 'ReactJS, Redux, react-router, moment.js',
 					links: [
-						{
-							icon: 'fa fa-github',
-							name: 'Github',
-							url: 'https://github.com/firhan200/xamarin-image-generator'
-						}
-					]
-				},
-				{
-					name : 'Simple Note App',
-					cover : 'assets/img/portfolio/todoandroid.png',
-					description: 'Simple Android Java Create, Read, Update & Delete Notes.',
-					tools: 'Java, Android Studio, SQLite',
-					links: [
-						{
-							icon: 'fa fa-github',
-							name: 'Github',
-							url: 'https://github.com/firhan200/android-todo'
-						}
 					]
 				},
 				{
 					name : 'Downer Connect App',
-					cover : 'assets/img/portfolio/downerapp.png',
-					description: 'Internal Employee App. News, Jobs, Report, Comments, etc.',
-					tools: 'Xamarin.Forms, C#, SQLite',
+					images : [
+						'assets/img/archive/downer/downerapp.png'
+						],
+					description: 'developing cross platform mobile app(Android & iOS) for Downer internal employee while im at JMDigital, includes many features: News Reader, Video Player, ASX Reader, Comments, etc.',
+					tools: 'Xamarin, Firebase',
 					links: [
-
 					]
 				},
 				{
 					name : 'Zodiac Pool App',
-					cover : 'assets/img/portfolio/zodiacapp.png',
-					description: 'Zodiac Pool Consumer app for monitoring sales data.',
-					tools: 'Xamarin.Forms, C#, SQLite ',
+					images : [
+						'assets/img/archive/zodiac-pool/zodiacapp.png'
+						],
+					description: 'developing cross platform mobile app(Android & iOS) for Zodiac Pool while im at JMDigital, features included: dashboard, video player, messages.',
+					tools: 'Xamarin, Firebase',
 					links: [
 					]
 				},
 				{
-					name : 'Laravel CMS',
-					cover : 'assets/img/portfolio/cms.png',
-					description: 'Content Management System for web apps.',
-					tools: 'Laravel 5.5, MySQL, Bootstrap',
-					links: [
-						{
-							icon: 'fa fa-github',
-							name: 'Github',
-							url: 'https://github.com/firhan200/cms'
-						}
-					]
-				},
-				{
-					name : 'Tudus',
-					cover : 'assets/img/portfolio/tudus.png',
-					description: 'Notes and Reminder Apps',
-					tools: 'Xamarin.Forms, C#, Sqlite',
-					links: [
-						{
-							icon: 'fa fa-github',
-							name: 'Github',
-							url: 'https://github.com/firhan200/Tudus'
-						}
-					]
-				},
-				{
-					name : 'Service Centre',
-					cover : 'assets/img/portfolio/servicecentre.png',
-					description: 'Get Solution/Troubleshooting a problems from expert.',
-					tools: 'Xamarin.Forms, C#, Sqlite',
-					links: [
-
-					]
-				},
-				{
-					name : 'Alumni Website',
-					cover : 'assets/img/portfolio/alumnifsm.png',
-					description: 'Portal Website for Faculty of Science & Mathematics Diponegoro University',
-					tools: 'Codeigniter, Bootstrap, MySQL, JQuery ',
-					links: [
-						{
-							icon: 'fa fa-globe',
-							name: 'Website',
-							url: 'http://alumni.fsm.undip.ac.id/'
-						}
-					]
-				},
-				{
-					name : 'Undip Career Center',
-					cover : 'assets/img/portfolio/ucc.png',
-					description: 'Jobs Portal for providing job seeker looking for a job within companies. i am part of programmer team, i am working lot on back-end.',
-					tools: 'Codeigniter, Bootstrap, MySQL, JQuery ',
-					links: [
-						{
-							icon: 'fa fa-globe',
-							name: 'Website',
-							url: 'https://career.undip.ac.id/'
-						}
-					]
-				},
-				{
-					name : 'PT. Pakarti Monitoring System ',
-					cover : 'assets/img/portfolio/smppp.png',
-					description: 'Asphalt process monitoring system. Manage asphalt data from drumming, sounding & distributing to client.',
-					tools: 'Laravel, Bootstrap, MySQL, JQuery ',
+					name : 'Antinol Study App',
+					images : [
+						'assets/img/archive/antinol-study/1.png',
+						'assets/img/archive/antinol-study/2.png',
+						'assets/img/archive/antinol-study/3.png'
+						],
+					description: 'developing cross platform mobile app(Android & iOS) for Antinol Study while im at JMDigital, features included: scan QR Code, fill & review survey, manage Pet.',
+					tools: 'Xamarin, Firebase',
 					links: [
 					]
 				},
-				{
-					name : 'KARWAS',
-					cover : 'assets/img/portfolio/karwasbig.png',
-					description: 'Monitoring contract flow in Diponegoro University included disbursement of funds.',
-					tools: 'Codeigniter, Bootstrap MySQL, JQuery ',
-					links: [
-					]
-				},
-				{
-					name : 'PROCUREMENT SYSTEM',
-					cover : 'assets/img/portfolio/ulpbig.png',
-					description: 'E-Procurement System for Diponegoro University.',
-					tools: 'Codeigniter, Bootstrap MySQL, JQuery ',
-					links: [
-					]
-				},
-				{
-					name : 'DIPONEGORO UNIVERSITY E-CONTRACT ',
-					cover : 'assets/img/portfolio/econtractbig.png',
-					description: 'Providing Diponegoro University for managing e-contract until ready for publishing to Government.',
-					tools: 'Codeigniter, Bootstrap MySQL, JQuery',
-					links: [
-					]
-				},
-				{
-					name : 'DIPONEGORO UNIVERSITY ACCOUNTING SYSTEM ',
-					cover : 'assets/img/portfolio/accountingbig.jpg',
-					description: 'Managing, Reporting and Monitoring money flow.',
-					tools: 'Codeigniter, Bootstrap MySQL, JQuery ',
-					links: [
-					]
-				},
-				{
-					name : 'DIPONEGORO UNIVERSITY CREDIT NUMBER SUBMISSION ',
-					cover : 'assets/img/portfolio/pak.png',
-					description: 'Provide college teacher to raise their credit number by submitting paper.',
-					tools: 'Codeigniter, Bootstrap MySQL, JQuery ',
-					links: [
-					]
-				}
-			];
+			]
 
 			function renderProjects(projects){
 				//clear html
@@ -365,21 +255,34 @@
 
 				//populate project
 				projects.forEach(function(project, key){
-					var cover = "<div align='center'>no cover</div>";
-					if(project.cover!==""){
-						cover = `
-							<div class="cover">
-								<a data-fancybox="gallery" href="`+project.cover+`"><img src="`+project.cover+`" class="img-fluid"></a>
-							</div>
-						`;
+					var cover = "";
+
+					for(var i=0;i < project.images.length;i++){
+						cover += `<div class="cover">
+									<a data-fancybox="gallery" href="`+project.images[i]+`"><img src="`+project.images[i]+`" class="img-fluid img-thumbnail"></a>
+								</div>`;
 					}
+
+					var images = "";
+
+					if(project.images.length > 1){
+						images = `<div class="multiple-items">
+								`+cover+` 
+							</div>`;
+					}else{
+						images = cover;
+					}
+
 					var template = `
 						<li>
 							<div class="name pad">
-								`+(key+1)+`. `+project.name+`
+								`+project.name+`
 							</div>
-							`+cover+`
+							`+images+`
 							<div class="pad">
+								<div class="help">
+									<i class="fa fa-info-circle"></i> click on image to enlarge
+								</div>
 								<div class="description">
 									`+project.description+`
 								</div>
@@ -437,6 +340,40 @@
 			$("#scroll-to-top-btn").click(function(){
 				document.body.scrollTop = 0;
 				document.documentElement.scrollTop = 0;
+			});
+
+			$('.multiple-items').slick({
+				infinite: false,
+				slidesToShow: 3,
+				slidesToScroll: 3,
+				responsive: [
+					{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 3,
+						infinite: true,
+						dots: true
+					}
+					},
+					{
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+					},
+					{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+					}
+					// You can unslick at a given breakpoint now by adding:
+					// settings: "unslick"
+					// instead of a settings object
+				]
 			});
 		})		
 	</script>
